@@ -24,6 +24,7 @@ const Joke = ({ match }: any): ReactElement => {
     if (id) {
       const data = getData(Keys.jokes, id);
       setJoke(data);
+      setDeliveryData('');
       if (data?.delivery) {
         getDelivery(data?.delivery as string).then((r) => setDeliveryData(r));
       }
@@ -69,12 +70,12 @@ const Joke = ({ match }: any): ReactElement => {
           </Card.Footer>
         </Card>
         {randomIdSelection(id) ? (
-          <a
-            href={`../${randomIdSelection(id)}/play`}
+          <Link
+            to={`../${randomIdSelection(id)}/play`}
             className='my-btn-primary'
           >
             Next
-          </a>
+          </Link>
         ) : undefined}
       </div>
     </div>
