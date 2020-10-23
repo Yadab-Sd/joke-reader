@@ -26,7 +26,7 @@ const NewJoke = ({ match }: any): ReactElement => {
       setValue('type', data?.type);
       if (data?.type === 'Two Part') setSingleType(false);
     }
-  }, [resultMsg, id]);
+  }, [resultMsg, id, setValue]);
 
   const onSubmit = (formData: any): void => {
     const { category, type, flags, content, delivery } = formData;
