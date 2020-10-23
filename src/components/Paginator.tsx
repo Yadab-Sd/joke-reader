@@ -44,7 +44,7 @@ const Paginator = ({ page }: PaginationProps): ReactElement => {
                 <Link
                   to={`?page=${Math.floor(page / Limits.pageLimit) + i + 1}`}
                   className={
-                    Math.floor(page / Limits.pageLimit) + i + 1 == page
+                    Math.floor(page / Limits.pageLimit) + i + 1 === page
                       ? 'active'
                       : ''
                   }

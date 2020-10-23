@@ -23,7 +23,7 @@ export const randomIdSelection = (id?: string) => {
       .map((jokeItem: { id: string | undefined }, i: any) =>
         jokeItem.id === id ? i : -1
       )
-      .find((trueData: number) => trueData != -1);
+      .find((trueData: number) => trueData !== -1);
     return id ? jokeData[index + 1]?.id : jokeData[randomIndex]?.id;
   }
   return 0;

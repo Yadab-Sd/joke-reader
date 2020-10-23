@@ -2,7 +2,7 @@ import React, { useState, useEffect, ReactElement } from 'react';
 import { faEdit, faPlay } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Button, Row, Col, Container } from 'react-bootstrap';
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { getData } from '../utils/store';
 import { Keys, Limits } from '../utils/constants';
 import Paginator from './Paginator';

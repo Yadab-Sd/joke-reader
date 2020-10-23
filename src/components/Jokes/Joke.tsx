@@ -1,10 +1,9 @@
 import React, { ReactElement, useCallback, useEffect, useState } from 'react';
 import { faClock, faHome } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Button, Card } from 'react-bootstrap';
-import { useForm } from 'react-hook-form';
+import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { getData, setData, updateData } from '../../utils/store';
+import { getData } from '../../utils/store';
 import { Keys } from '../../utils/constants';
 import { JokeBody } from '../Home';
 import { randomIdSelection } from '../../utils/idGenerator';
