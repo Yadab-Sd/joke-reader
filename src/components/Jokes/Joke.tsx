@@ -1,4 +1,4 @@
-import React, { ReactElement, useCallback, useEffect, useState } from 'react';
+import React, { ReactElement, useEffect, useState } from 'react';
 import { faClock, faHome } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Card } from 'react-bootstrap';
@@ -28,7 +28,7 @@ const Joke = ({ match }: any): ReactElement => {
         getDelivery(data?.delivery as string).then((r) => setDeliveryData(r));
       }
     }
-  }, []);
+  }, [id]);
 
   return (
     <div className=''>
@@ -51,6 +51,7 @@ const Joke = ({ match }: any): ReactElement => {
                       <img
                         className='mr-10'
                         src={require(`../../assets/img/${flag.toLowerCase()}.jpg`)}
+                        alt='Flag'
                         key={i}
                       />
                     ))

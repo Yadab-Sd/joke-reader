@@ -94,6 +94,7 @@ const Home = (): ReactElement => {
                     ? joke.flags.map((flag: string, i: number) => (
                         <img
                           src={require(`../assets/img/${flag.toLowerCase()}.jpg`)}
+                          alt='Flag'
                           key={i}
                         />
                       ))
